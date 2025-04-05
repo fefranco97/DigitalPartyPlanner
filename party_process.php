@@ -16,9 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $command = "python3 party_planner.py " . implode(" ", $selected_items);
     $output = shell_exec($command);
     $response = json_decode($output, true);
-
-    $host = gethostname();
-    $host = gethostbyname($host);
     
     ?>
 <!DOCTYPE html>
